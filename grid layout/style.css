@@ -1,0 +1,60 @@
+body{
+    background: radial-gradient(circle, #fff, #bbb);
+}
+
+.grid-container{
+    display: grid; /*para inicializar*/
+    background-color: cornsilk;
+    grid-template-columns: auto auto auto; /*para crear columnas, y al poner "auto", el tamaño de las columas es 
+    automatico. tambien podemos ponerle nosotros el tamaño de las columnas o filas*/
+    grid-template-rows: auto auto auto;
+    /*el justify-content sirve para modificar la grilla verticalmente segun la opcion.*/
+    /*aling-content sirve para modificar la grilla orizontalmente segun la opcion*/
+}
+
+.grid-container div{
+    background-color: crimson;
+    text-align: center;
+    color: white;
+    border: 1px solid black;
+}
+
+.grid-items1{
+    grid-column: 1 / 3; /*para indicar cuantas columnas queremos que ocupe el items 1*/
+    grid-row: 1 / 3; /* para indicar cuantas filas queremos que ocupe el items 1*/
+    /* el grid-area sirve para indicar cuantas columnas y filas queremos que ocupe el items,
+    1 / 1 / 3 / 3 primero el numero de fila donde queremos que comience, segundo el numero de columna donde queremos
+    que comience tercero el numero de fila donde queremos que finalice, cuarto el numero de columna donde queremos
+    que finalice.*/
+}
+
+/*segundo ejemplo*/
+.grid-container2{
+    display: grid;
+    grid-template-areas: 'header header header' /*para definir areas*/
+    'menu main aside'
+    'footer footer footer';
+}
+
+.grid-container2 div{
+    background-color: crimson;
+    text-align: center;
+    color: white;
+    border: 1px solid black;   
+}
+
+.items1{
+    grid-area: header; /*para asignarle un area*/
+}
+.items2{
+    grid-area: menu;
+}
+.items3{
+    grid-area: main;
+}
+.items4{
+    grid-area: aside;
+}
+.items5{
+    grid-area: footer;
+}
